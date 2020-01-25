@@ -177,6 +177,7 @@ module.exports = {
     functionGlobalContext: {
         process: process,
         os: require('os'),
+        onoff: require('/usr/local/lib/node_modules/onoff').Gpio,
         // octalbonescript:require('octalbonescript'),
         // jfive:require("johnny-five"),
         // j5board:require("johnny-five").Board({repl:false})
@@ -189,13 +190,13 @@ module.exports = {
     //paletteCategories: ['subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
     editorTheme: {
         page: {
-            title: "resin.io Node-RED",
-            favicon: "/usr/src/app/assets/favicon.ico"
+            title: "plantbot Node-RED",
+            favicon: "/usr/src/app/assets/favicon_io/favicon.ico"
         },
         header: {
-            title: "resin.io Node-RED",
+            title: "plantbot Node-RED",
             image: "/usr/src/app/assets/resin_logo.png", // or null to remove image
-            url: "https://resin.io"
+            url: "https://github.com/kanr/plantbot"
         },
         deployButton: {
             type: "simple",
@@ -217,7 +218,7 @@ module.exports = {
             // info - record information about the general running of the application + warn + error + fatal errors
             // debug - record information which is more verbose than info + info + warn + error + fatal errors
             // trace - record very detailed logging + debug + info + warn + error + fatal errors
-            level: "info",
+            level: "debug",
             // Whether or not to include metric events in the log output
             metrics: false,
             // Whether or not to include audit events in the log output
